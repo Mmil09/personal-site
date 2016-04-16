@@ -20,7 +20,8 @@ var PATHS = {
 	build: {
 		javascripts: __dirname + '/src/public/build/javascripts',
 		stylesheets: __dirname + '/src/public/build/css',
-		views: __dirname + '/src/public/build'
+		views: __dirname + '/src/public/build',
+		index: __dirname + '/src/public',
 	},
 	assets: {
 		javascripts: __dirname + '/src/public/assets/javascripts',
@@ -42,8 +43,7 @@ gulp.task('browser-sync', ['build'], function() {
 
   return browserSync.init({
     server: {
-      baseDir: "./src/public",
-      index: "build/html/index.html"
+      baseDir: "./src/public"
     },
     port: 8080
   });
@@ -98,12 +98,20 @@ ___  ___        __            ___  ___  __
 
 gulp.task('templates', ['clean-templates'], function() {
 
-  gulp.src(PATHS.assets.views + '/**/*.jade')
+  gulp.src([PATHS.assets.views + '/**/*.jade', PATHS.assets.views + '!/index.jade'])
     .pipe(jade({
       pretty: true
     }))
     .pipe(gulp.dest(PATHS.build.views))
 });
+
+gulp.task('index', ['templates'], function() {
+	gulp.src(PATHS.assets.views + '/index.jade')
+		.pipe(jade({
+			pretty: true
+		}))
+		.pipe(gulp.dest(PATHS.build.index))
+})
 
 
 /*
@@ -142,7 +150,7 @@ gulp.task('clean-css', function() {
 });
 
 gulp.task('clean-templates', function() {
-	return gulp.src([PATHS.build.views], {read: false})
+	return gulp.src([PATHS.build.views + '/**/*.html'], {read: false})
 		.pipe(clean());
 })
 
@@ -154,7 +162,7 @@ gulp.task('clean-templates', function() {
 Console Commands
 */
 
-gulp.task('build', ['clean', 'compile-css', 'templates', 'browserify']);
+gulp.task('build', ['clean', 'compile-css', 'templates', 'index', 'browserify']);
 
 //cleans, performs build, and watches for changes with live reload
 gulp.task('dev', ['build', 'browser-sync', 'watch']);
