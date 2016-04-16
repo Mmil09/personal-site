@@ -96,7 +96,10 @@ ___  ___        __            ___  ___  __
 */
 
 
-gulp.task('templates', ['clean-templates'], function() {
+gulp.task('templates', ['clean-templates', 'compile-html', 'compile-index'])
+
+
+gulp.task('compile-html', function() {
 
   gulp.src([PATHS.assets.views + '/**/*.jade', PATHS.assets.views + '!/index.jade'])
     .pipe(jade({
@@ -105,13 +108,13 @@ gulp.task('templates', ['clean-templates'], function() {
     .pipe(gulp.dest(PATHS.build.views))
 });
 
-gulp.task('index', ['templates'], function() {
+gulp.task('compile-index', function() {
 	gulp.src(PATHS.assets.views + '/index.jade')
 		.pipe(jade({
 			pretty: true
 		}))
 		.pipe(gulp.dest(PATHS.build.index))
-})
+});
 
 
 /*
@@ -162,7 +165,7 @@ gulp.task('clean-templates', function() {
 Console Commands
 */
 
-gulp.task('build', ['clean', 'compile-css', 'templates', 'index', 'browserify']);
+gulp.task('build', ['clean', 'compile-css', 'templates', 'browserify']);
 
 //cleans, performs build, and watches for changes with live reload
 gulp.task('dev', ['build', 'browser-sync', 'watch']);
