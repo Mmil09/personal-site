@@ -4,7 +4,6 @@ block content
 
 	include common/navbar
 
-	//- Header
 	header
 		.container
 			.intro-text
@@ -13,121 +12,105 @@ block content
 					| Full-Stack 
 					br 
 					| Web Development
-				//- a.page-scroll.btn.btn-xl(href='#services') Tell Me More
 
 	//- Services Section
 	section#services
 		.container
 			.row
-				.col-lg-12.text-center
-					h2.section-heading Services
-					h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-			.row.text-center
-				.col-md-4
-					span.fa-stack.fa-4x
-						i.fa.fa-circle.fa-stack-2x.text-primary
-						i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
-					h4.service-heading E-Commerce
-					p.text-muted
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-				.col-md-4
-					span.fa-stack.fa-4x
-						i.fa.fa-circle.fa-stack-2x.text-primary
-						i.fa.fa-laptop.fa-stack-1x.fa-inverse
-					h4.service-heading Responsive Design
-					p.text-muted
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-				.col-md-4
-					span.fa-stack.fa-4x
-						i.fa.fa-circle.fa-stack-2x.text-primary
-						i.fa.fa-lock.fa-stack-1x.fa-inverse
-					h4.service-heading Web Security
-					p.text-muted
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-
-
-
-	//- Portfolio Grid Section
-	section#portfolio.bg-light-gray
-		.container
+				.col-lg-12
+					h2.section-heading.text-center Skills &amp; Services
+					h3.section-subheading.text-muted I've been a professional software engineer for over one and half years working in a small, fast-paced startup environment, working mainly in JavaScript, Node, and Front End Web Development.  I am excited about the direction of the modern web and the growing ecosystem of JavaScript libraries and frameworks. Alongside web development, I have been developing projects for Arduino using C/C++.
+			
 			.row
-				.col-lg-12.text-center
-					h2.section-heading Portfolio
-					h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-			.row
-				.col-md-4.col-sm-6.portfolio-item
-					a.portfolio-link(href='#portfolioModal1', data-toggle='modal')
-						.portfolio-hover
-							.portfolio-hover-content
-								i.fa.fa-plus.fa-3x
-						img.img-responsive(src='/assets/img/portfolio/roundicons.png', alt='')
-					.portfolio-caption
-						h4 Round Icons
-						p.text-muted Graphic Design
-				.col-md-4.col-sm-6.portfolio-item
-					a.portfolio-link(href='#portfolioModal2', data-toggle='modal')
-						.portfolio-hover
-							.portfolio-hover-content
-								i.fa.fa-plus.fa-3x
-						img.img-responsive(src='/assets/img/portfolio/startup-framework.png', alt='')
-					.portfolio-caption
-						h4 Startup Framework
-						p.text-muted Website Design
-				.col-md-4.col-sm-6.portfolio-item
-					a.portfolio-link(href='#portfolioModal3', data-toggle='modal')
-						.portfolio-hover
-							.portfolio-hover-content
-								i.fa.fa-plus.fa-3x
-						img.img-responsive(src='/assets/img/portfolio/treehouse.png', alt='')
-					.portfolio-caption
-						h4 Treehouse
-						p.text-muted Website Design
-				.col-md-4.col-sm-6.portfolio-item
-					a.portfolio-link(href='#portfolioModal4', data-toggle='modal')
-						.portfolio-hover
-							.portfolio-hover-content
-								i.fa.fa-plus.fa-3x
-						img.img-responsive(src='/assets/img/portfolio/golden.png', alt='')
-					.portfolio-caption
-						h4 Golden
-						p.text-muted Website Design
-				.col-md-4.col-sm-6.portfolio-item
-					a.portfolio-link(href='#portfolioModal5', data-toggle='modal')
-						.portfolio-hover
-							.portfolio-hover-content
-								i.fa.fa-plus.fa-3x
-						img.img-responsive(src='/assets/img/portfolio/escape.png', alt='')
-					.portfolio-caption
-						h4 Escape
-						p.text-muted Website Design
-				.col-md-4.col-sm-6.portfolio-item
-					a.portfolio-link(href='#portfolioModal6', data-toggle='modal')
-						.portfolio-hover
-							.portfolio-hover-content
-								i.fa.fa-plus.fa-3x
-						img.img-responsive(src='/assets/img/portfolio/dreams.png', alt='')
-					.portfolio-caption
-						h4 Dreams
-						p.text-muted Website Design
+				ul
+					li Javascript and jQuery
+					li HTML and Templating languages (Jade, Handlebars)
+					li CSS and CSS preprocessors (Stylus, SASS, LESS)
+					li Node/Express 
+					li API development
+					li Build systems (Gulp and Grunt)
+					li Integration of 3rd party services
+					li Angular
+					li React
+					li React Native
+
 	// About Section
 	section#about
 		.container
 			.row
 				.col-lg-12.text-center
-					h2.section-heading About
+					h2.section-heading About Me
+			.row
+				.col-lg-12 Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. 
+			.row
+				.col-sm-12
+					.team-member
+						img.img-responsive.img-circle(src='/assets/img/team/1.jpg', alt='')
+						//- h4 Kay Garland
+						//- p.text-muted Lead Designer
+						ul.list-inline.social-buttons
+							li
+								a(href='#')
+									i.fa.fa-twitter
+							li
+								a(href='#')
+									i.fa.fa-facebook
+							li
+								a(href='#')
+									i.fa.fa-linkedin
+							
+	// Contact Section
+	section#contact
+		.container
+			.row
+				.col-lg-12.text-center
+					h2.section-heading Contact Us
 					h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
 			.row
 				.col-lg-12
-					ul.timeline
+					form#contactForm(name='sentMessage', novalidate='')
+						.row
+							.col-md-6
+								.form-group
+									input#name.form-control(type='text', placeholder='Your Name *', required='', data-validation-required-message='Please enter your name.')
+									p.help-block.text-danger
+								.form-group
+									input#email.form-control(type='email', placeholder='Your Email *', required='', data-validation-required-message='Please enter your email address.')
+									p.help-block.text-danger
+								.form-group
+									input#phone.form-control(type='tel', placeholder='Your Phone *', required='', data-validation-required-message='Please enter your phone number.')
+									p.help-block.text-danger
+							.col-md-6
+								.form-group
+									textarea#message.form-control(placeholder='Your Message *', required='', data-validation-required-message='Please enter a message.')
+									p.help-block.text-danger
+							.clearfix
+							.col-lg-12.text-center
+								#success
+								button.btn.btn-xl(type='submit') Send Message
+	footer
+		.container
+			.row
+				.col-md-4
+					span.copyright Copyright © Michael Miller
+				.col-md-4
+					ul.list-inline.social-buttons
 						li
-							.timeline-image
-								img.img-circle.img-responsive(src='/assets/img/about/1.jpg', alt='')
-							.timeline-panel
-								.timeline-heading
-									h4 2009-2011
-									h4.subheading Our Humble Beginnings
-								.timeline-body
-									p.text-muted
+							a(href='#')
+								i.fa.fa-twitter
+						li
+							a(href='#')
+								i.fa.fa-facebook
+						li
+							a(href='#')
+								i.fa.fa-linkedin
+				.col-md-4
+					//- ul.list-inline.quicklinks
+					//-   li
+					//-     a(href='#') Privacy Policy
+					//-   li
+					//-     a(href='#') Terms of Use
+uted
 										| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
 						li.timeline-inverted
 							.timeline-image
