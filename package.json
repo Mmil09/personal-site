@@ -16,7 +16,7 @@
     "express": "^4.13.4",
     "jade": "0.28.0",
     "method-override": "^2.3.5",
-    "stylus": "0.32.0",
+    "stylus": "0.32.0"
   },
   "devDependencies": {
     "browserify": "^11.2.0",
