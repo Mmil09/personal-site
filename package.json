@@ -11,6 +11,14 @@
     "jshint": "0.5.8"
   },
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "jade": "0.28.0",
+    "method-override": "^2.3.5",
+    "stylus": "0.32.0",
+  },
+  "devDependencies": {
     "browserify": "^11.2.0",
     "event-stream": "^3.3.2",
     "gulp": "^3.9.0",
@@ -22,8 +30,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.4.1",
-    "jade": "0.28.0",
-    "stylus": "0.32.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
