@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "browserify": "^11.2.0",
+    "event-stream": "^3.3.2",
     "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.6.0",
