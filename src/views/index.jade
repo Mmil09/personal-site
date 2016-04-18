@@ -4,39 +4,7 @@ block append head
 	script(src='https://www.google.com/recaptcha/api.js', async, defer)
 	script.
 		var recaptchaSiteKey = "#{recaptchaSiteKey}";
-
-block append bodyScripts
-	script.
-		var $contactForm = $('form#contactForm');
-
-		$contactForm.on('submit', sendMessage);
-
-		function sendMessage(e) {
-			e.preventDefault();
-
-			console.info('ere')
-
-			var data = $contactForm.serialize();
-
-			console.log(data)
-
-			$.ajax({
-				url: '/send-message',
-				method: 'POST',
-				data: data,
-				success: function(data) {
-					console.log(data)
-				},
-				error: function(err) {
-					console.error(err)
-				},
-				complete: function() {
-
-				}
-			})		
-		}
-
-
+		
 block content
 
 	include common/navbar
@@ -92,7 +60,7 @@ block content
 				.col-lg-12.text-center
 					h2.section-heading Contact
 					h3.section-subheading.text-muted Please contact me using this form, or email me directly at 
-						a(href="mailto:#{myEmail}") mmil09@gmail.com
+						a(href="mailto:#{myEmail}") #{myEmail}
 			.row
 				.col-lg-12
 					form#contactForm(name='sentMessage', novalidate='')

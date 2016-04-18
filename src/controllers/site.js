@@ -1,6 +1,7 @@
 var config = require('../config');
 var mailgun = require('mailgun-js')({apiKey: config.mailgun.privateApiKey, domain: config.mailgun.domain});
-var myEmail = 'mmil09@gmail.com'
+var myEmail = 'michael@michael-j-miller.com';
+var fromEmail = 'messages@mail.michael-j-miller.com';
 
 module.exports.renderIndex = function(req, res) {
 	return res.render('index', {
@@ -37,22 +38,29 @@ module.exports.sendMessage = function(req, res) {
 		})			
 	}
 
-	var data = {
-	  from: data.name + '<' + data.email + '>',
-	  to: myEmail,
-	  subject: data.subject,
-	  text: data.message,
-	};
+	var mailgunEmail = createMailgunEmailFromData(data);
 
-	mailgun.messages().send(data, function (error, body) {
+	mailgun.messages().send(mailgunEmail, function (error, body) {
 		if (error) {
 			console.log('Error sending email: ', error);
 			return res.status(400)
 		}
 
-	  console.log(body);
 	  return res.status(200).send('hello')
 	});
-
 	
 }
+
+function createMailgunEmailFromData(data) {
+	var email = {
+	  from: fromEmail,
+	  to: myEmail,
+	  subject: data.subject,
+	};
+
+	email.text = 'from: ' + data.name + ' <' + data.email + '>\n';
+	email.text +='message: \n\n' + data.message;
+
+	return email;
+}
+
