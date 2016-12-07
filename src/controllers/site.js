@@ -58,7 +58,7 @@ function createMailgunEmailFromData(data) {
 	  subject: data.subject,
 	};
 
-	email.text = 'from: ' + data.name + ' <' + data.email + '>\n';
+	email.text = 'from: ' + data.name + ' <' + data.email + '> via michael-j-miller.com' + '>\n';
 	email.text +='message: \n\n' + data.message;
 
 	return email;
