@@ -24,7 +24,10 @@ block content
 			.row
 				.col-lg-12
 					h2.section-heading.text-center Skills &amp; Services
-					h3.section-subheading.text-muted I am a professional software engineer working in a small, fast-paced startup environment, working mainly in JavaScript, Node, and Front End Web Development.  I am excited about the direction of the modern web and the growing ecosystem of JavaScript libraries and frameworks. Alongside web development, I have been developing projects for Arduino using C/C++.
+					h3.section-subheading.text-muted 
+						span I am a professional software engineer working in a small, fast-paced startup environment, working mainly in JavaScript, Node, and Front End Web Development.  I am excited about the direction of the modern web and the growing ecosystem of JavaScript libraries and frameworks.  As a personal development project, I am currently working on porting a MIDI/audio web application for Mac/Windows desktop use by using Electron library (progress can be currently viewed on my Github account in the 
+						a(href="http://github.com/Mmil09/note-writer", target="_blank") Note Writer 
+						span repository). Alongside web development, I have also been dabbling in projects for Arduino using C/C++.  
 			
 			.row
 				ul
@@ -32,12 +35,18 @@ block content
 					li Angular
 					li Node/Express 
 					li Mongo DB
+					li Heroku and AWS
 					li HTML and Templating languages (Jade, Handlebars)
 					li CSS and CSS preprocessors (Stylus, SASS, LESS)
 					li API development
 					li Build systems (Gulp, Grunt, Webpack)
 					li Integration of 3rd party services
 
+			.row
+				.col-xs-12.text-center(style="padding-top: 25px") 
+					span Click  
+					a(href="https://s3.amazonaws.com/michael-j-miller/Michael_Miller_Resume.pdf", target="_blank") here&nbsp;
+					span to view my resume
 
 	section#about
 		.container
@@ -45,13 +54,17 @@ block content
 				.col-lg-12.text-center
 					h2.section-heading About Me
 			.row
-				.col-lg-12 Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur. 
+				.col-lg-12 
+				span Outside of software development, I enjoy almost anything that has to do with music and audio. Musical instruments and music production have been hobbies of mine since I was a teenager.  I play guitar, violin, and a little bit of bass and drums.  I also enjoy going to shows at local venues and listening to records.  
+				br
+				br
+				span In addition to music, I enjoy being outdoors and hiking with my two dogs, Maxwell and Opal, and my wife, Liz.  I also enjoy traveling, cooking and trying new kinds of cuisine.  
 			.row
 				.col-sm-12
 					.team-member
-						img.img-responsive.img-circle(src='/assets/img/headshot.png', alt='')
-						//- h4 
-						//- p.text-muted 
+						img.img-responsive.img-circle(src='https://s3.amazonaws.com/michael-j-miller/headshot.png', alt='', width="200", height="200")
+
+						include common/_socialLinks
 
 	section#contact
 		.container
@@ -90,16 +103,7 @@ block content
 				.col-md-4
 					span.copyright Copyright © Michael Miller
 				.col-md-4
-					ul.list-inline.social-buttons
-						li
-							a(href='https://github.com/mmil09', target="_blank")
-								i.fa.fa-github
-						li
-							a(href='https://www.linkedin.com/in/michaelmiller84', target="_blank")
-								i.fa.fa-linkedin
-						li
-							a(href='mailto:#{myEmail}', target="_blank")
-								i.fa.fa-envelope
+					include common/_socialLinks
 				.col-md-4
 
 

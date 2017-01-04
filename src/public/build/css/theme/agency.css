@@ -144,6 +144,7 @@ fieldset[disabled] .btn-xl.active {
 }
 .navbar-default .navbar-brand {
   color: #2993CA;
+  color: #fff;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-default .navbar-brand:hover,
@@ -151,6 +152,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
   color: #2074a0;
+  color: #ccc;
 }
 .navbar-default .navbar-collapse {
   border-color: rgba(255, 255, 255, 0.02);
@@ -176,6 +178,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
   color: #2993CA;
+  color: #ccc;
   outline: none;
 }
 .navbar-default .navbar-nav > .active > a {
@@ -215,7 +218,8 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('http://www.developerdev.com/images/placeholders/1920x1200-3.jpg');
+  background-color: #000;
+  background-image: url('https://s3.amazonaws.com/michael-j-miller/header-background.jpg');
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
@@ -536,7 +540,7 @@ aside.clients img {
 }
 section#contact {
   background-color: #222;
-  background-image: url('../img/map-image.png');
+  background-image: url('/assets/img/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
 }
